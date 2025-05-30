@@ -1,5 +1,10 @@
 # Protobuf Generator
 
+## Required Dependencies
+
+* `make`
+* `docker`
+
 ## Language Support
 
 Currently, only the following languages are supported:
@@ -8,7 +13,7 @@ Currently, only the following languages are supported:
 * TypeScript
 * Python
 
-Additional languages will be added in the future.
+More languages will be added in the future.
 
 ## Usage
 
@@ -17,9 +22,9 @@ Additional languages will be added in the future.
 This is where you place your directories containing the **.proto** files.
 
 All folders under `/src/source/*` should be lowercase and use `-` as a separator.
-Internally, the name of the packages or modules will be converted to the appropriate naming convention for each target language.
+Internally, the names of packages or modules will be converted to the appropriate naming convention for each target language.
 
 ### Docker
 
-Clone the repository to any location and run `make compose` from the terminal.
-This will generate the Protobuf files under `/src/generated`.
+Clone the repository to any location and run `make compose` in the terminal.
+This will generate the Protobuf files under `/src/generated/...`
