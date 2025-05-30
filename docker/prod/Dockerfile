@@ -4,8 +4,6 @@ WORKDIR /root
 
 # setup os dependencies
 RUN apt update && apt install -y \
-    curl \
-    tar \
     nodejs \
     npm \
     python3 \
