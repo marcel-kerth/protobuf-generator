@@ -14,13 +14,6 @@ RUN apt update && apt install -y \
     protoc-gen-go \
     protoc-gen-go-grpc
 
-# install go | ARM64
-ENV GO_VERSION=1.24.3
-ENV PATH="/usr/local/go/bin:/root/go/bin:$PATH"
-RUN curl -fsSL https://go.dev/dl/go${GO_VERSION}.linux-arm64.tar.gz -o go.tar.gz && \
-    tar -C /usr/local -xzf go.tar.gz && \
-    rm go.tar.gz
-
 # setup python dependencies
 RUN pip3 install --break-system-packages \
     grpcio-tools
