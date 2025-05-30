@@ -1,0 +1,11 @@
+syntax = "proto3";
+package example;
+option go_package = "example/";
+
+service ExampleService {
+    rpc ExampleMethod (Test) returns (Test) {};
+}
+
+message Test {
+    string message = 1;
+}

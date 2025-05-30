@@ -1,0 +1,10 @@
+services:
+  protobuf-generator-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: marcel-kerth/protobuf-generator
+    volumes:
+      - ../../src:/src
+    working_dir: "/"
+    command: ["sleep", "infinity"]
